@@ -14,7 +14,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Products::index();
+        dd($products);
+        return view("CRUD.view", [ "products" => $products]);
     }
 
     /**
