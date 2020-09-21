@@ -13,7 +13,7 @@ class ReviewFactory extends Factory
      *
      * @var string
      */
-    protected $model = \app\Models\Model\Review::class;
+    protected $model = \App\Models\Model\Review::class;
 
     /**
      * Define the model's default state.
@@ -26,9 +26,9 @@ class ReviewFactory extends Factory
             'product_id' => function(){
                 return Product::all()->random();	
             },
-            'customer' => $this->$faker->name,
-            'review' => $this->$faker->paragraph,
-            'star' => $this->$faker->numberBetween(0,5)
+            'customer' => $this->faker->name,
+            'review' => $this->faker->paragraph,
+            'star' => $this->faker->numberBetween(0,5)
         ];
     }
 }
